@@ -64,18 +64,14 @@ class BonusServiceTest {
     @DisplayName("Test bonus service with wrong value of sales = letters")
     void test_Bonus_Service_With_Wrong_Sales_Letters() {
         String salesWithLetters = "abc";
-        assertThrows(NumberFormatException.class, () -> {
-            service.getRes(Double.parseDouble(salesWithLetters));
-        });
+        assertThrows(NumberFormatException.class, () -> service.getRes(Double.parseDouble(salesWithLetters)));
     }
 
     @Test
     @DisplayName("Test bonus service with wrong value of sales = characters")
     void test_Bonus_Service_With_Wrong_Sales_Characters() {
         String salesWithCharacters = "$%&*";
-        assertThrows(NumberFormatException.class, () -> {
-            service.getRes(Double.parseDouble(salesWithCharacters));
-        });
+        assertThrows(NumberFormatException.class, () -> service.getRes(Double.parseDouble(salesWithCharacters)));
     }
 
     @Test
